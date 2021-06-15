@@ -1,0 +1,46 @@
+section {
+border-bottom: 1px solid black;
+border-top: 1px solid black;
+}
+
+.compatibility {
+  a {
+    font-size: 14px;
+    color: hotpink;
+  }
+}
+.mdn {
+  a {
+    font-size: 14px;
+    color: rgb(72, 160, 243);
+  }
+}
+
+.exp {
+  // apparition des gaps dans flexbox: s'applique verticalement et horizontalement
+  gap: 20px;
+  // ici, justify-content vient modifier ces 20px de gap
+  justify-content: space-between;
+  
+  .div {
+    width: 200px;
+    height: 150px;
+    background-color: lightgray;
+  } 
+}
+
+.exp-2 {
+  // color en orange au hover les div disposant de la classe "rouge ou jaune"
+  // :is a une spécificité très forte et est difficile a surcharger.
+  // :where fait la meme chose mais avec une spécificité nulle...
+  .div:is(.rouge, .jaune):hover {
+    background-color: rgb(235, 119, 25);
+  } 
+}
+
+.exp-3 {
+  // color en orange seulement les div suivis d'une balise <p>
+  .div:has(>p) {
+    background-color: rgb(235, 119, 25);
+  } 
+}
