@@ -44,3 +44,42 @@ border-top: 1px solid black;
     background-color: rgb(235, 119, 25);
   } 
 }
+
+.exp-4 {
+// style la premiere lettre dans le <p>
+  p::first-letter {
+    margin-inline-end: 8px;
+    margin-top: 10px;
+    color: rgb(27, 110, 235);
+    font-size: 46px;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+  }
+}
+
+.exp-5 {
+  // style la premiere ligne dans le <p>
+  p::first-line {
+  background-color: #4d4d4d;
+  color: white;
+  font-weight: bold;
+  }
+}
+
+.exp-6 {
+  // style les bullet point des listes
+  ::marker {
+    color: hotpink;
+  }
+  ::selection {
+    background-color: greenyellow;
+  }
+  ul {
+    list-style: inside !important;
+    font-size: 20px;
+  }
+  li {
+  display: list-item;
+  }
+}
